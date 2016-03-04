@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jameskmonger/iterableobject/issues"
   },
-  "homepage": "https://github.com/Jameskmonger/iterableobject"
+  "homepage": "https://github.com/Jameskmonger/iterableobject",
+  "files": [
+      "index.js"
+  ]
 }
