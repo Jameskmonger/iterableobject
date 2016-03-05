@@ -7,10 +7,11 @@
         }
 
         var clonedObject = clone(obj);
-        var keys = Object.keys(clonedObject);
-        var nextIndex = 0;
 
         clonedObject[Symbol.iterator] = function () {
+            var keys = Object.keys(clonedObject);
+            var nextIndex = 0;
+            
             return {
                 next: function () {
                     if (nextIndex < keys.length) {
