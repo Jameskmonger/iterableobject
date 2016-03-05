@@ -53,3 +53,7 @@ The output of the above example will be the following:
 You can execute the tests for this project by running `npm test`.
 
 [isiterable](https://github.com/Jameskmonger/isiterable) and [object-equal](https://github.com/intesso/object-equal) have been used to make testing easier.
+
+## license
+
+[MIT](/LICENSE)
