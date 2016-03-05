@@ -1,4 +1,6 @@
 (function(mod) {
+    var clone = require('clone');
+
     mod.exports = function (obj) {
         if (obj === undefined || obj === null || typeof obj !== 'object') {
             throw new Error('Cannot create an iterable from that type.');
