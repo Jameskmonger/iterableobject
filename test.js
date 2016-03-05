@@ -1,6 +1,7 @@
 'use strict';
 
 const iterableobject = require('./index.js');
+const isiterable = require('isiterable');
 
 (() => {
     let testName = 'should throw error trying to create iterable from number';
