@@ -185,3 +185,28 @@ const isiterable = require('isiterable');
 
     console.log("PASS: " + testName);
 })();
+
+(() => {
+    let testName = 'first next() call should return first value';
+
+    let firstValue = 3;
+    let secondValue = {
+        value: 18
+    };
+
+    let obj = {
+        firstKey: firstValue,
+        secondKey: secondValue
+    };
+
+    let iterable = iterableobject(obj);
+    let iterator = iterable[Symbol.iterator]();
+
+    let firstCall = iterator.next().value;
+
+    if (firstCall !== firstValue) {
+        throw new Error("FAIL: " + testName);
+    }
+
+    console.log("PASS: " + testName);
+})();
