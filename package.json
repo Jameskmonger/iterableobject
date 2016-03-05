@@ -20,7 +20,8 @@
     "index.js"
   ],
   "devDependencies": {
-    "isiterable": "^1.0.2"
+    "isiterable": "^1.0.2",
+    "object-equal": "^1.0.0"
   },
   "dependencies": {
     "clone": "^1.0.2"
