@@ -4,6 +4,27 @@
             throw new Error('Cannot create an iterable from that type.');
         }
 
-        throw new Error("not implemented");
+        var keys = Object.keys(obj);
+        var nextIndex = 0;
+
+        obj[Symbol.iterator] = function () {
+            return {
+                next: function () {
+                    if (nextIndex < keys.length) {
+                        return {
+                            value: obj[keys[nextIndex++]],
+                            done: false
+                        };
+                    }
+
+                    return {
+                        value: undefined,
+                        done: true
+                    };
+                }
+            }
+        }
+
+        return obj;
     };
 })(module);
