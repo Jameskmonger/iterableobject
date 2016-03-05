@@ -237,3 +237,32 @@ const objectequal = require('object-equal');
 
     console.log("PASS: " + testName);
 })();
+
+(() => {
+    let testName = 'readme armour example';
+
+    let expectedOutput = 'Helmet of the Gods: An impressive helmet, believed to have come from another realm.Steel Shoes: A pair of heavy steel shoes. They glisten in the sunlight.';
+
+    let armour = {
+        helmet: {
+            name: 'Helmet of the Gods',
+            description: 'An impressive helmet, believed to have come from another realm.'
+        },
+        boots: {
+            name: 'Steel Shoes',
+            description: 'A pair of heavy steel shoes. They glisten in the sunlight.'
+        }
+    };
+
+    let actualOutput = '';
+
+    for (let part of iterableobject(armour)) {
+        actualOutput = actualOutput += part.name + ": " + part.description;
+    }
+
+    if (actualOutput !== expectedOutput) {
+        throw new Error("FAIL: " + testName);
+    }
+
+    console.log("PASS: " + testName);
+})()
