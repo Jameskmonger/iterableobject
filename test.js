@@ -73,3 +73,20 @@ const iterableobject = require('./index.js');
 
     console.log("PASS: " + testName);
 })();
+
+(() => {
+    let testName = 'should throw error trying to create iterable from null';
+
+    let errorThrown = false;
+    try {
+        iterableobject(null);
+    } catch (e) {
+        errorThrown = true;
+    }
+
+    if (!errorThrown) {
+        throw new Error("FAIL: " + testName);
+    }
+
+    console.log("PASS: " + testName);
+})();
