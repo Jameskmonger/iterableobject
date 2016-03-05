@@ -266,3 +266,22 @@ const objectequal = require('object-equal');
 
     console.log("PASS: " + testName);
 })();
+
+
+(() => {
+    let testName = 'stays in sync with the object';
+
+    let onlyKeyValue = 3;
+
+    let obj = iterableobject({});
+    obj['onlyKey'] = onlyKeyValue;
+
+    let iterator = obj[Symbol.iterator]();
+    let next = iterator.next();
+
+    if (next.value !== onlyKeyValue) {
+        throw new Error("FAIL: " + testName);
+    }
+
+    console.log("PASS: " + testName);
+})();
