@@ -1,6 +1,6 @@
 (function(mod) {
     mod.exports = function (obj) {
-        if (typeof obj !== 'object') {
+        if (obj === undefined || obj === null || typeof obj !== 'object') {
             throw new Error('Cannot create an iterable from that type.');
         }
 
