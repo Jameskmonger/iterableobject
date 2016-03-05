@@ -1,6 +1,6 @@
 {
   "name": "iterableobject",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Turn an object into an iterable object.",
   "main": "index.js",
   "scripts": {
