@@ -159,7 +159,7 @@ const isiterable = require('isiterable');
 
     let iterable = iterableobject(obj);
 
-    if (!isiterale(iterable)) {
+    if (!isiterable(iterable)) {
         throw new Error("FAIL: " + testName);
     }
 
@@ -179,7 +179,7 @@ const isiterable = require('isiterable');
 
     let iterable = iterableobject(obj);
 
-    if (isiterale(obj)) {
+    if (isiterable(obj)) {
         throw new Error("FAIL: " + testName);
     }
 
