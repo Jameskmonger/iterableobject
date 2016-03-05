@@ -146,3 +146,22 @@ const isiterable = require('isiterable');
 
     console.log("PASS: " + testName);
 })();
+
+(() => {
+    let testName = 'should return iterable object';
+
+    let obj = {
+        firstKey: 3,
+        secondKey: {
+            value: 18
+        }
+    };
+
+    let iterable = iterableobject(obj);
+
+    if (!isiterale(iterable)) {
+        throw new Error("FAIL: " + testName);
+    }
+
+    console.log("PASS: " + testName);
+})();
