@@ -47,3 +47,9 @@ The output of the above example will be the following:
 > Helmet of the Gods: An impressive helmet, believed to have come from another realm.
 
 > Steel Shoes: A pair of heavy steel shoes. They glisten in the sunlight.
+
+## Development
+
+You can execute the tests for this project by running `npm test`.
+
+[isiterable](https://github.com/Jameskmonger/isiterable) and [object-equal](https://github.com/intesso/object-equal) have been used to make testing easier.
