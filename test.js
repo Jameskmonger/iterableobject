@@ -265,4 +265,4 @@ const objectequal = require('object-equal');
     }
 
     console.log("PASS: " + testName);
-})()
+})();
