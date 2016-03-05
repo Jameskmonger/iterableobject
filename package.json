@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/Jameskmonger/iterableobject",
   "files": [
-      "index.js"
-  ]
+    "index.js"
+  ],
+  "devDependencies": {
+    "isiterable": "^1.0.2"
+  }
 }
