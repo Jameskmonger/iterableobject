@@ -41,3 +41,9 @@ for (var part of iterable(armour)) {
     console.log(part.name + ": " + part.description);
 }
 ```
+
+The output of the above example will be the following:
+
+> Helmet of the Gods: An impressive helmet, believed to have come from another realm.
+
+> Steel Shoes: A pair of heavy steel shoes. They glisten in the sunlight.
