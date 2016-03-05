@@ -18,3 +18,22 @@ const iterableobject = require('./index.js');
 
     console.log("PASS: " + testName);
 })();
+
+(() => {
+    let testName = 'should throw error with correct message trying to create iterable from number';
+
+    let errorThrown = false;
+    try {
+        iterableobject(0);
+    } catch (e) {
+        if (e.message == 'Cannot create an iterable from that type.') {
+            errorThrown = true;
+        }
+    }
+
+    if (!errorThrown) {
+        throw new Error("FAIL: " + testName);
+    }
+
+    console.log("PASS: " + testName);
+})();
