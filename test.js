@@ -1,9 +1,11 @@
-var iterableobject = require('./index.js');
+'use strict';
 
-(function() {
-    var testName = 'should throw error trying to create iterable from number';
+const iterableobject = require('./index.js');
 
-    var errorThrown = false;
+(() => {
+    let testName = 'should throw error trying to create iterable from number';
+
+    let errorThrown = false;
     try {
         iterableobject(0);
     } catch (e) {
