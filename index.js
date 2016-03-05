@@ -6,15 +6,16 @@
             throw new Error('Cannot create an iterable from that type.');
         }
 
-        var keys = Object.keys(obj);
+        var clonedObject = clone(obj);
+        var keys = Object.keys(clonedObject);
         var nextIndex = 0;
 
-        obj[Symbol.iterator] = function () {
+        clonedObject[Symbol.iterator] = function () {
             return {
                 next: function () {
                     if (nextIndex < keys.length) {
                         return {
-                            value: obj[keys[nextIndex++]],
+                            value: clonedObject[keys[nextIndex++]],
                             done: false
                         };
                     }
@@ -27,6 +28,6 @@
             }
         }
 
-        return obj;
+        return clonedObject;
     };
 })(module);
