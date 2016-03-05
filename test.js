@@ -2,6 +2,7 @@
 
 const iterableobject = require('./index.js');
 const isiterable = require('isiterable');
+const objectequal = require('object-equal');
 
 (() => {
     let testName = 'should throw error trying to create iterable from number';
@@ -230,7 +231,7 @@ const isiterable = require('isiterable');
     let firstCall = iterator.next().value;
     let secondCall = iterator.next().value;
 
-    if (secondCall != secondValue) {
+    if (!objectequal(secondCall, secondValue)) {
         throw new Error("FAIL: " + testName);
     }
 
